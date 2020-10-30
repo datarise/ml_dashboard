@@ -17,6 +17,7 @@ def app():
     dataset = st.selectbox(
                         'Choose the dataset to create: ',
                         ('Make Blobs', 'Make Moons', 'Make Circles'))
+                        
     n_samples = st.slider('Choose the number of samles in the data: ', 0, 1000, 100, 50)
     noise = st.slider('Choose the noise level: ', 0.0, 1.0, 0.1, 0.05)
     

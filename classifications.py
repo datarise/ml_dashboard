@@ -267,11 +267,12 @@ def plot_desicion_boundery_n_roc(X, y, clf, X_test, y_test):
         X_test (numpy array): test features
         y_test (numpy array): test target
     """    
-    fig1 = plt.figure(figsize=(15,10))
-    plot_decision_regions(X, y, clf=clf, legend=2)
-    # Adding axes annotations
-    plt.title('Decision Boundery')
-    st.pyplot(fig1)
+    if X.shape[1] == 2:
+        fig1 = plt.figure(figsize=(15,10))
+        plot_decision_regions(X, y, clf=clf, legend=2)
+        # Adding axes annotations
+        plt.title('Decision Boundery')
+        st.pyplot(fig1)
 
     if len(np.unique(y)) == 2:
         st.markdown('The ROC-curve for the test data is displayed below:')
