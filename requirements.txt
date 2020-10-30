@@ -6,3 +6,4 @@ sklearn
 seaborn
 mlxtend
 pandas-profiling
+streamlit_pandas_profiling
